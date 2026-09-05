@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import rutasTarea from "./routes/rutasTarea.js"
 
 const app = express();
 
@@ -11,5 +12,7 @@ app.get("/", (_req, res) => {
         message: "API FUNCIONANDO"
     });
 });
+
+app.use("/api/tarea", rutasTarea);
 
 export default app;
